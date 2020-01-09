@@ -1,8 +1,3 @@
-KALO GAK TAU NANYA
-
-GRUP SEPI :V
-
-AOWKWOW
 
 software:
 1. Webserver
