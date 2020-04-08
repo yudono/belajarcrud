@@ -24,6 +24,12 @@ $fetch = mysqli_query($connect, $sql);
 $nomor = 1;
 // bikin nomor menjadi 0
 
+function rupiah($angka){
+	
+	$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+	return $hasil_rupiah;
+ 
+}
 
 echo '<p><a href="tambah.php" class="btn btn-primary">Tambah</a></p>'; // link tambah
 
@@ -38,13 +44,14 @@ while($row = mysqli_fetch_array($fetch))
 	echo'<tr>';
 	echo '<td>'.$nomor.'</td>'; // masukin nomor ke tabel
 	echo '<td>'.$row['nama'].'</td>'; //masukin nama dari database tadi
-	echo '<td>'.$row['harga'].'</td>'; //masukin harga dari database tadi
+	echo '<td>'.rupiah($row['harga']).'</td>'; //masukin harga dari database tadi
 	echo '<td><a href="edit.php?id='.$row['id'].'">Edit</a>&nbsp;&nbsp;<a href="hapus.php?id='.$row['id'].'">Hapus</a></td>'; //masukin action nanti linknya nyambung ke file
 	echo '</tr>';
 
 	$nomor++; //tambah nomor otomatis (incement)
 
 }
+
 echo '<table>';
 ?>
 
