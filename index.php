@@ -1,4 +1,18 @@
 <?php 
+include 'header.php';
+?>
+
+<div class="container">
+	<br><br><br>
+	<div class="card">
+	<div class="card-header">
+		<div class="card-title">
+			<b>BELAJAR CRUD</b>
+		</div>
+	</div>
+	<div class="card-body">
+
+		<?php 
 require 'connect.php'; //panggil file connect.php
 
 $sql = "SELECT * FROM produk";
@@ -11,10 +25,10 @@ $nomor = 0;
 // bikin nomor menjadi 0
 
 
-echo '<a href="tambah.php">Tambah</a>'; // link tambah
+echo '<p><a href="tambah.php" class="btn btn-primary">Tambah</a></p>'; // link tambah
 
 //bikin table
-echo '<table border="1">';
+echo '<table class="table table-striped table-bordered">';
 echo '<tr><td>Nomor</td><td>Nama</td><td>Harga</td><td>Action</td></tr>';
 
 // menampilkan data
@@ -32,9 +46,16 @@ while($row = mysqli_fetch_array($fetch))
 
 }
 echo '<table>';
- ?>
+?>
+
+
+</div>
+</div>
+</div>
 
 
 
-
+<?php 
+include 'footer.php';
+?>
  <!-- jadi gini file di atas buat nampilin data doang -->
