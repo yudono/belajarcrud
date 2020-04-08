@@ -50,9 +50,9 @@ if(isset($_POST['nama']))
 
 	if($update)
 	{
-		echo 'Sucess!'; //kalo berhasil :)
+		header('Location:/'); //kalo berhasil
 	}else{
-		echo 'Failed!'; //kalo gagal :(
+		echo '<script>alert("Error!");</script>'; //kalo gagal
 	}
 
 	// sama kya di atas buat nampolin
@@ -66,7 +66,7 @@ if(isset($_POST['nama']))
  <!-- htmlnya buat bikin form -->
 <form action="" method="post">
 	<p><input type="nama" name="nama" value="<?=$data['nama']?>" class="form-control"></p>
-	<p><input type="harga" name="harga" value="<?=$data['harga']?>" class="form-control"></p>
+	<p><input type="number" name="harga" value="<?=$data['harga']?>" class="form-control"></p>
 	<p><button type="submit" class="btn btn-primary">Submit</button>
 		<a href="index.php" class="btn btn-secondary">Back</a>
 	</p>

@@ -21,7 +21,7 @@ $sql = "SELECT * FROM produk";
 $fetch = mysqli_query($connect, $sql);
 // buat query dari database
 
-$nomor = 0;
+$nomor = 1;
 // bikin nomor menjadi 0
 
 

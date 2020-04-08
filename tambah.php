@@ -31,9 +31,9 @@ if(isset($_POST['nama'])) //cek post nama
 
 	if($add)
 	{
-		echo 'Success!'; //kalo berhasil
+		header('Location:/'); //kalo berhasil
 	}else{
-		echo 'Error!'; //kalo gagal
+		echo '<script>alert("Error!");</script>'; //kalo gagal
 	}
 }
  ?>
@@ -41,7 +41,7 @@ if(isset($_POST['nama'])) //cek post nama
  <!-- ini form buat tambannya -->
 <form action="" method="post">
 	<p><input type="nama" name="nama" placeholder="Nama Barang" class="form-control"></p>
-	<p><input type="harga" name="harga" placeholder="Harga barang" class="form-control"></p>
+	<p><input type="number" name="harga" placeholder="Harga barang" class="form-control"></p>
 	<p><button type="submit" class="btn btn-primary">Submit</button>
 	<a href="index.php" class="btn btn-secondary">Back</a>
 </p>
